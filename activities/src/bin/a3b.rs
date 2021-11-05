@@ -9,4 +9,16 @@
 // * Use an if..else if..else block to determine which message to display
 // * Use the println macro to display messages to the terminal
 
-fn main() {}
+
+fn main() {
+    let number: i32 = 5;
+    let limit: i32 = 6;
+
+    if number > limit {
+        println!(">{:?}", limit);
+    } else if number < limit {
+        println!("<{:?}", limit);
+    } else {
+        println!("={:?}", limit);
+    }
+}
