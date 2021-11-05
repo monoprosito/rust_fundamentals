@@ -12,7 +12,7 @@
 
 fn main() {
     let number: i32 = 5;
-    let limit: i32 = 6;
+    let limit: i32 = 5;
 
     if number > limit {
         println!(">{:?}", limit);
