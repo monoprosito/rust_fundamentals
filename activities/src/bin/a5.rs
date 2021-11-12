@@ -9,4 +9,19 @@
 // * Print the variable within the loop statement
 // * Use break to exit the loop
 
-fn main() {}
+fn main() {
+    // * Use a mutable integer variable
+    let mut n = 1;
+    let limit = 4;
+
+    // * Use a loop statement
+    loop {
+        // * Print the variable within the loop statement
+        println!("{:?}", n);
+        if n == limit {
+            // * Use break to exit the loop
+            break;
+        }
+        n += 1;
+    }
+}
