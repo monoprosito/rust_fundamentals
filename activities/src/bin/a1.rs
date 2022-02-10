@@ -10,16 +10,16 @@
 
 
 // * Use a function to display your first name
-fn show_my_first_name() {
+fn display_my_first_name() {
     println!("Santiago");
 }
 
 // * Use a function to display your last name
-fn show_my_last_name() {
+fn display_my_last_name() {
     println!("Arboleda");
 }
 
 fn main() {
-    show_my_first_name();
-    show_my_last_name();
+    display_my_first_name();
+    display_my_last_name();
 }
