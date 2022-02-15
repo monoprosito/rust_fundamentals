@@ -35,6 +35,7 @@ struct ShippingBoxDimensions {
     depth: f64
 }
 
+
 impl ShippingBoxDimensions {
     fn properties (&self) {
         println!("Shipping box width: {:?}", self.width);
