@@ -54,7 +54,11 @@ struct ShippingBox {
 
 impl ShippingBox {
     // * Implement functionality on the box struct to create a new box
-    fn new (weight: f64, color: ShippingBoxColor, dimensions: ShippingBoxDimensions) -> Self {
+    fn new (
+        weight: f64,
+        color: ShippingBoxColor,
+        dimensions: ShippingBoxDimensions
+    ) -> Self {
         Self {
             weight,
             color,
