@@ -11,4 +11,44 @@
 // * Return a result from the function
 // * The Err variant should detail the reason why they cannot make a purchase
 
-fn main() {}
+
+struct Customer {
+    name: Option<String>,
+    age: i8,
+}
+
+fn can_purchase_restricted_things(customer: &Customer) -> Result<(), String> {
+    if customer.age >= 21 {
+        return Ok(())
+    }
+    return Err(String::from("You must be over 21 years old to enter the store."));
+}
+
+
+fn main() {
+    let john = Customer {
+        name: Some(String::from("John")),
+        age: 19
+    };
+
+    let unknown = Customer {
+        name: None,
+        age: 22
+    };
+
+    let customers: Vec<Customer> = vec![john, unknown];
+
+    for customer in customers {
+        println!("----------");
+
+        match &customer.name {
+            Some(name) => print!("Security Guard: Hello {}, ", name),
+            None => print!("Security Guard: Hello, ")
+        }
+
+        match can_purchase_restricted_things(&customer) {
+            Ok(_) => println!("Welcome to the Gun Shop."),
+            Err(message) => println!("{}", message)
+        }
+    }
+}
